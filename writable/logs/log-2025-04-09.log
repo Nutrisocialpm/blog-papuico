@@ -1,0 +1,121 @@
+ERROR - 2025-04-09 21:22:28 --> mysqli_sql_exception: Table 'varient_db.general_settings' doesn't exist in C:\laragon\www\varient\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\varient\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\varient\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\varient\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\varient\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\varient\app\Config\Globals.php(31): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\varient\app\Config\Globals.php(207): Config\Globals::setGlobals()
+#6 C:\laragon\www\varient\system\Autoloader\Autoloader.php(316): include_once('C:\\laragon\\www\\...')
+#7 C:\laragon\www\varient\system\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\...')
+#8 C:\laragon\www\varient\system\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+#9 C:\laragon\www\varient\app\Config\Routes.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+#10 C:\laragon\www\varient\system\Router\RouteCollection.php(339): require('C:\\laragon\\www\\...')
+#11 C:\laragon\www\varient\system\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+#12 C:\laragon\www\varient\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(NULL)
+#13 C:\laragon\www\varient\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\laragon\www\varient\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#15 C:\laragon\www\varient\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#16 C:\laragon\www\varient\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#17 {main}
+CRITICAL - 2025-04-09 21:22:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'varient_db.general_settings' doesn't exist
+[Method: GET, Route: favicon.ico]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `general_settings`
+WHERE `id` = :id:', [...], false)
+ 2 APPPATH\Config\Globals.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Config\Globals.php(207): Config\Globals::setGlobals()
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(316): include_once('C:\\laragon\\www\\varient\\app\\Config\\Globals.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\varient\\app\\Config\\Globals.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+ 7 APPPATH\Config\Routes.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+ 8 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\laragon\\www\\varient\\app\\Config\\Routes.php')
+ 9 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+10 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-09 21:22:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'varient_db.general_settings' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `general_settings`
+WHERE `id` = 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `general_settings`
+WHERE `id` = 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `general_settings`
+WHERE `id` = :id:', [...], false)
+ 4 APPPATH\Config\Globals.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Config\Globals.php(207): Config\Globals::setGlobals()
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(316): include_once('C:\\laragon\\www\\varient\\app\\Config\\Globals.php')
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\varient\\app\\Config\\Globals.php')
+ 8 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+ 9 APPPATH\Config\Routes.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+10 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\laragon\\www\\varient\\app\\Config\\Routes.php')
+11 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+12 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-04-09 21:22:28 --> [Caused by] mysqli_sql_exception: Table 'varient_db.general_settings' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `general_settings`
+WHERE `id` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `general_settings`
+WHERE `id` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `general_settings`
+WHERE `id` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `general_settings`
+WHERE `id` = :id:', [...], false)
+ 5 APPPATH\Config\Globals.php(31): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Config\Globals.php(207): Config\Globals::setGlobals()
+ 7 SYSTEMPATH\Autoloader\Autoloader.php(316): include_once('C:\\laragon\\www\\varient\\app\\Config\\Globals.php')
+ 8 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\varient\\app\\Config\\Globals.php')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Globals')
+10 APPPATH\Config\Routes.php(10): CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Globals')
+11 SYSTEMPATH\Router\RouteCollection.php(339): require('C:\\laragon\\www\\varient\\app\\Config\\Routes.php')
+12 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+13 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+14 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-04-09 23:44:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:44:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:44:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:45:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:47:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2025-04-09 18:47:05 --> CSRF token verified.
+DEBUG - 2025-04-09 23:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2025-04-09 18:53:50 --> CSRF token verified.
+DEBUG - 2025-04-09 23:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:53:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2025-04-09 18:53:53 --> CSRF token verified.
+DEBUG - 2025-04-09 23:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2025-04-09 18:54:18 --> CSRF token verified.
+DEBUG - 2025-04-09 23:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2025-04-09 18:54:18 --> CSRF token verified.
+DEBUG - 2025-04-09 23:54:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:56:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:58:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:58:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:59:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:59:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+DEBUG - 2025-04-09 23:59:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\DatabaseHandler' driver.
+INFO - 2025-04-09 18:59:45 --> CSRF token verified.
+INFO - 2025-04-09 19:02:15 --> CSRF token verified.
+INFO - 2025-04-09 19:10:15 --> CSRF token verified.
